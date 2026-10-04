@@ -2,7 +2,7 @@
 
 Mini project: predict sold prices for properties in three contrasting Sydney suburbs (Mosman, Parramatta, Penrith) and serve the best model through a Streamlit app.
 
-Live app: _add Streamlit Community Cloud link_
+Live app:[Sydney Housing Price Predictor](https://s225099575-sydney-housing-prediction-decision-suppor-app-scrkz5.streamlit.app/)
 
 ## Contents
 | File | Description |
@@ -16,7 +16,7 @@ Live app: _add Streamlit Community Cloud link_
 | `requirements.txt` | Python dependencies |
 
 ## Data dictionary
-`sale_price` (target, AUD), `sale_date`, `suburb`, `property_type`, `bedrooms`, `bathrooms`, `parking`, `land_size` (m², 0 for apartments/units/studios, blank if not listed), `dist_cbd` and `dist_station` (km, suburb-level assumptions; excluded from the models because they duplicate `suburb`).
+`sale_price` (target, AUD), `sale_date`, `suburb`, `property_type`, `bedrooms`, `bathrooms`, `parking`, `land_size` (m², 0 for apartments/units/studios, blank if not listed), `dist_cbd`, and `dist_station` (km, suburb-level assumptions; excluded from the models because they duplicate `suburb`).
 
 ## Run it
 ```
