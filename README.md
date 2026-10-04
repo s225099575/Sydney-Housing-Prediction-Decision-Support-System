@@ -2,7 +2,7 @@
 
 Mini project: predict sold prices for properties in three contrasting Sydney suburbs (Mosman, Parramatta, Penrith) and serve the best model through a Streamlit app.
 
-Live app:[Sydney Housing Price Predictor](https://s225099575-sydney-housing-prediction-decision-suppor-app-scrkz5.streamlit.app/)
+Live app: [Sydney Housing Price Predictor](https://s225099575-sydney-housing-prediction-decision-suppor-app-scrkz5.streamlit.app/)
 
 ## Contents
 | File | Description |
