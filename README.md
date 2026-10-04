@@ -18,13 +18,46 @@ Live app: [Sydney Housing Price Predictor](https://s225099575-sydney-housing-pre
 ## Data dictionary
 `sale_price` (target, AUD), `sale_date`, `suburb`, `property_type`, `bedrooms`, `bathrooms`, `parking`, `land_size` (m², 0 for apartments/units/studios, blank if not listed), `dist_cbd`, and `dist_station` (km, suburb-level assumptions; excluded from the models because they duplicate `suburb`).
 
-## Run it
+## Build, run, and use
+ 
+**Requirements:** Python 3.11 or newer, and Git (or download the repository as a ZIP from GitHub and extract it instead of cloning).
+
+**0. Clone the repository and move into it:**
+ 
+```
+git clone https://github.com/s225099575/Sydney-Housing-Prediction-Decision-Support-System.git
+cd Sydney-Housing-Prediction-Decision-Support-System
+```
+ 
+**1. Open a terminal in the project folder** (the one containing `app.py`), then create and activate an environment:
+ 
+```
+# Option A: venv
+python -m venv .venv            # Windows (or python3 -m venv .venv for macOS/Linux)
+.venv\Scripts\activate          # Windows (or source .venv/bin/activate for macOS/Linux)
+ 
+# Option B: Anaconda
+conda create -n housing python=3.11
+conda activate housing
+```
+ 
+**2. Install dependencies** (use `pip3` on Linux/macOS if `pip` is not found):
+ 
 ```
 pip install -r requirements.txt
-pip install jupyter          # only needed for the notebook
-jupyter notebook sydney_housing_project.ipynb   # run all cells to regenerate model.joblib
+```
+ 
+**3. (Optional) Regenerate the model.** `model.joblib` is already included, so this is only needed to retrain. Run `pip install jupyter`, then `jupyter notebook`, open `sydney_housing_prediction_system.ipynb` and, choose **Run > Run All Cells**.
+ 
+**4. Start the app:**
+ 
+```
 streamlit run app.py
 ```
+ 
+The app opens in your browser at http://localhost:8501.
+ 
+**5. Use the app.** Select a suburb and property type, enter bedrooms, bathrooms, parking, and land size (use 0 for apartments, units, and studios), then click **Predict price**. The app shows the estimated price, an indicative range, and a caution message for cases the model handles poorly (Parramatta houses and premium Mosman houses).
 
 ## Deploy (Streamlit Community Cloud)
-Push the repository to GitHub, go to share.streamlit.io, choose **Create app**, choose GitHub, select the repository, and set the main file to `app.py`.
+Push the repository to GitHub, go to share.streamlit.io, choose **Create app**, choose GitHub, select the repository, set the main file to `app.py`, and click **Deploy**.
