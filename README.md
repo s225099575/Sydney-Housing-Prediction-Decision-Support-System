@@ -29,7 +29,7 @@ git clone https://github.com/s225099575/Sydney-Housing-Prediction-Decision-Suppo
 cd Sydney-Housing-Prediction-Decision-Support-System
 ```
  
-**1. Open a terminal in the project folder** (the one containing `app.py`), then create and activate an environment:
+**1. Create and activate an environment** from inside the project folder (the one containing `app.py`):
  
 ```
 # Option A: venv
